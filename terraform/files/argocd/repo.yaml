@@ -10,7 +10,7 @@ metadata:
 data:
   repositories: |
     - name: main-repo
-      url: git@github.com:makhov/k0saas-demo.git
+      url: git@github.com:makhov/k0saas-iac-demo.git
       type: git
       insecure: true
       insecureIgnoreHostKey: true

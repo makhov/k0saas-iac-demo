@@ -18,5 +18,5 @@ spec:
     directory:
       recurse: true
     path: apps/files/cert-manager
-    repoURL: %%%REPO_URL%%%
+    repoURL: git@github.com:makhov/k0saas-iac-demo.git
     targetRevision: main

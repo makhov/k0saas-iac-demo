@@ -13,7 +13,7 @@ spec:
       jsonnet: {}
       recurse: true
     path: apps
-    repoURL: git@github.com:makhov/k0saas-demo.git
+    repoURL: git@github.com:makhov/k0saas-iac-demo.git
     targetRevision: main
   syncPolicy:
     automated: {}
