@@ -1,0 +1,29 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: argocd-cm
+    app.kubernetes.io/part-of: argocd
+data:
+  repositories: |
+    - name: main-repo
+      url: git@github.com:makhov/k0saas-demo.git
+      type: git
+      insecure: true
+      insecureIgnoreHostKey: true
+      sshPrivateKeySecret:
+        name: main-repo-creds
+        key: sshPrivateKey
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: main-repo-creds
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repo-creds
+data:
+  sshPrivateKey: %%%SSH_PRIVATE_KEY%%%%
